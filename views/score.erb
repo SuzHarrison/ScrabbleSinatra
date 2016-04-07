@@ -1,0 +1,25 @@
+<section class="transbox">
+  <% if @word_score %>
+    <h1>
+      <%= @word.upcase %> has a score of <%= @word_score %> points!
+    </h1>
+  <% end %>
+</section>
+
+<div class="params">
+  <% params %>
+</div>
+
+<form action="" method="post" accept-charset="utf-8">
+  <label for="word">Enter your single Scrabble Word!</label>
+  <input type="text" name="word" value="" id="word">
+
+
+  <input type="submit" value="Score It!">
+</form>
+<!-- 
+<section class="gradient">
+    <button>Button</button>
+    <button class="hover">:hover</button>
+    <button class="active">:active</button>
+</section> -->

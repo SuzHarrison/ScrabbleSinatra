@@ -1,0 +1,20 @@
+<section class="transbox">
+    <% if @words_scores %>
+      <% @words_scores.each do |word, score| %>
+        <h1>
+          <span><%= word.upcase %></span> has a score of <span><%= score %></span> points!
+        </h1>
+      <% end %>
+    <% end %>
+</section>
+
+<div class="params">
+  <% params %>
+</div>
+
+<form action="" method="post" accept-charset="utf-8">
+  <label for="word">Enter your first Scrabble word, if multiple words separate with a space</label>
+  <input type="text" name="word" value="" id="word">
+
+  <input type="submit" value="Score It!">
+</form>

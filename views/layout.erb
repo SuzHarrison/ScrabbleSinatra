@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scrabble sinatra</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="css" href="stylesheets/styles.css">
+  </head>
+  <header>
+    <img class="header_image" src="images/Scrabble_logo.png" alt="scrabble_logo">
+    <nav>
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/score">Score-a-Word!</a></li>
+        <li><a href="/score-many">Score-Many-Words!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
