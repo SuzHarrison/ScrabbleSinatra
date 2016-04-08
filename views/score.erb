@@ -3,6 +3,14 @@
     <h1>
       <%= @word.upcase %> has a score of <%= @word_score %> points!
     </h1>
+    <ul>
+      <% @letter_scores.each do |letter_hash|
+          letter_hash.each do |letter, score|%>
+            <li><%= letter %> has a score of <%= score %></li>
+      <% end
+      end%>
+    </ul>
+
   <% end %>
 </section>
 
@@ -17,7 +25,7 @@
 
   <input type="submit" value="Score It!">
 </form>
-<!-- 
+<!--
 <section class="gradient">
     <button>Button</button>
     <button class="hover">:hover</button>

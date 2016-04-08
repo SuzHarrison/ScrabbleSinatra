@@ -14,6 +14,7 @@ class Scoring
     word_array = word.upcase.split("")
 
     word_score = 0
+    #validity of entry
 
     # if word.length <= 7
       word_array.each do |letter|
@@ -37,6 +38,13 @@ class Scoring
     return words_hash
       # @word_score = Scoring.score(words["word"])
       # @word = words["word"]
+  end
+
+  def self.letter_by_letter(word)
+    letters = word.upcase.chars
+    letters.map do |letter|
+      {letter => SCORE_CHART[letter]}
+    end
   end
 
   def self.highest_score_from(array_of_words)

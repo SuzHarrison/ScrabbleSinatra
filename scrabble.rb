@@ -14,6 +14,7 @@ class ScrabbleSinatra < Sinatra::Base
   post '/score' do
     @word_score = Scoring.score(params["word"])
     @word = params["word"]
+    @letter_scores = Scoring.letter_by_letter(params["word"])
     erb :score
   end
 
