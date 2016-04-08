@@ -3,6 +3,10 @@ require_relative 'lib/scoring.rb'
 
 class ScrabbleSinatra < Sinatra::Base
 
+  get '/' do
+    erb :index
+  end
+
   get '/index' do
     erb :index
   end

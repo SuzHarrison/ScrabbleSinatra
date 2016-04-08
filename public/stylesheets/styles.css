@@ -57,9 +57,15 @@ section.transbox {
     margin: 30px;
     background-color: #ffffff;
     color: black;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     opacity: 0.6;
     filter: alpha(opacity=60);
+}
+
+.transbox ul  {
+    /*width: 17em;*/
+    margin-left: 34%;
+    margin-right: 34%;
 }
 
 /*section.gradient button {

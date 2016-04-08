@@ -11,24 +11,29 @@ class Scoring
   }
 
   def self.score(word)
-    word_array = word.upcase.split("")
+    if word.match /[^a-zA-Z]/
+      puts "You have entered invalid information. Please try again."
+    else
+      word_array = word.upcase.split("")
 
-    word_score = 0
-    #validity of entry
+      word_score = 0
+      #validity of entry
 
-    # if word.length <= 7
-      word_array.each do |letter|
-        word_score += SCORE_CHART[letter]
-    #returns score value for given word. word input as string.
-      end
-    #seven letter word get 50point bonus
-      word.length >= 7 ? word_score += 50 : word_score
-    # end
-    return word_score
+      # if word.length <= 7
+        word_array.each do |letter|
+          word_score += SCORE_CHART[letter]
+          #returns score value for given word. word input as string.
+        end
+        #seven letter word get 50point bonus
+        word.length >= 7 ? word_score += 50 : word_score
+        # end
+        return word_score
+    end
   end
 
   def self.score_many(words)
     #words = "melissa suz"
+
     words = words.split(" ")
     # words = ["melissa", "suz"]
     words_hash ={}
